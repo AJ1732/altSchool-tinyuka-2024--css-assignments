@@ -24,10 +24,10 @@ Convert the "Otter Essay" card design into HTML and CSS implementation. The desi
 - Pixel-perfect conversion from design
 - Responsive behavior
 
-<!-- ## Live Link
+## Live Link
 
 You can view the live version of this assignment here:  
-[Assignment 1 Live Link](https://1732-altschool-css-assignment-1.netlify.app/) -->
+[Assignment 1 Live Link](https://1732-altschool-css-assignments.netlify.app/assignment-1/)
 
 ![Assignment 1 Design](images/assignment-1.png)
 
@@ -52,10 +52,10 @@ Implement the "Huckleberry" agency section design. Features include:
 - Accurate color matching
 - Proper text styles and spacing
 
-<!-- ## Live Link
+## Live Link
 
 You can view the live version of this assignment here:  
-[Assignment 2 Live Link](https://1732-altschool-css-assignment-2.netlify.app/) -->
+[Assignment 2 Live Link](https://1732-altschool-css-assignments.netlify.app/assignment-2/)
 
 ![Assignment 2 Design](images/assignment-2.png)
 
@@ -80,10 +80,10 @@ Convert the "Novus Watch" product card design. Elements include:
 - Proper spacing and typography
 - Shadow and rounded corner effects
 
-<!-- ## Live Link
+## Live Link
 
 You can view the live version of this assignment here:  
-[Assignment 3 Live Link](https://1732-altschool-css-assignment-3.netlify.app/) -->
+[Assignment 3 Live Link](https://1732-altschool-css-assignments.netlify.app/assignment-3/)
 
 ![Assignment 3 Design](images/assignment-3.png)
 
@@ -109,10 +109,10 @@ Implement the responsive registration form design. Components include:
 - Accurate typography and spacing
 - Mobile-first approach
 
-<!-- ## Live Link
+## Live Link
 
 You can view the live version of this assignment here:  
-[Assignment 4 Live Link](https://1732-altschool-css-assignment-4.netlify.app/) -->
+[Assignment 4 Live Link](https://1732-altschool-css-assignments.netlify.app/assignment-4/)
 
 ![Assignment 4 Design](images/assignment-4.png)
 
@@ -143,10 +143,10 @@ Convert the provided Figma design into a pixel-perfect **Checkout Page** using *
 - **Semantic HTML**: Use appropriate HTML5 elements for better accessibility and structure.
 - **Assets**: Include all necessary assets such as icons, images, and fonts.
 
-<!-- ## Live Link
+## Live Link
 
 You can view the live version of this assignment here:  
-[Assignment 5 Live Link](https://1732-altschool-css-assignment-5.netlify.app/) -->
+[Assignment 5 Live Link](https://1732-altschool-css-assignments.netlify.app/assignment-5/)
 
 ![Assignment 5 Design](images/assignment-5.png)
 
@@ -204,10 +204,10 @@ The project uses the following npm packages (listed in `package.json`):
 - **sass**: SCSS compiler.
 <!-- - **gulp-clean-css**: Minifies CSS files. -->
 
-<!-- ## Live Link
+## Live Link
 
 You can view the live version of this assignment here:  
-[Assignment 6 Live Link](https://1732-altschool-css-assignment-6.netlify.app/) -->
+[Assignment 6 Live Link](https://1732-altschool-css-assignments.netlify.app/assignment-6/)
 
 ![Assignment 6 Design](images/assignment-6.png)
 
