@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALT/SOE/024/2954 - CSS Assignment 5</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="content-grid">
+      <nav class="flex__btw-center | nav--desktop">
+        <figure class="logo">
+          <img src="./assets/wppusher_logo.png" alt="wppusher_logo" />
+        </figure>
+
+        <div class="flex__btw-center | nav__links">
+          <ul class="flex__btw-center">
+            <li>Download</li>
+            <li>Learn more</li>
+            <li>Pricing</li>
+            <li>Help</li>
+          </ul>
+
+          <button>Account</button>
+        </div>
+
+        <input
+          type="checkbox"
+          id="nav--mobile__toggle"
+          class="nav--mobile__toggle-checkbox"
+          hidden
+        />
+
+        <label for="nav--mobile__toggle" class="nav__hamburger">
+          <span></span>
+        </label>
+
+        <div class="nav__links--mobile">
+          <ul class="flex__start">
+            <li>Download</li>
+            <li>Learn more</li>
+            <li>Pricing</li>
+            <li>Help</li>
+          </ul>
+
+          <button>Account</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="content-grid">
+      <div class="container">
+        <section>
+          <header class="form__header">
+            <h2>Checkout</h2>
+          </header>
+
+          <form action="/submit" method="post">
+            <!-- YOUR BASIC INFORMATION SECTION -->
+            <fieldset class="form__section">
+              <header class="flex__start-center | form__section__header">
+                <div class="flex__center">1</div>
+                <legend>Your Basic Information</legend>
+              </header>
+
+              <div class="flex__start-center | form__field--container">
+                <!-- FIRST NAME FIELD -->
+                <div class="form__field">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Jane"
+                  />
+                </div>
+
+                <!-- LAST NAME FIELD -->
+                <div class="form__field">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Doe"
+                  />
+                </div>
+
+                <!-- EMAIL FIELD -->
+                <div class="form__field">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="janedoe@example.com"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- YOUR PAYMENT INFORMATION SECTION -->
+            <fieldset class="form__section">
+              <header class="flex__start-center | form__section__header">
+                <div class="flex__center">2</div>
+                <legend>Your Payment Information</legend>
+              </header>
+
+              <div class="flex__start-center | form__field--container">
+                <!-- CREDIT CARD FIELD -->
+                <div class="form__field form__field--credit-card">
+                  <label for="creditCard">Credit Card</label>
+
+                  <div class="form__field__credit-card__grid">
+                    <input
+                      type="text"
+                      id="creditCard"
+                      name="creditCard"
+                      placeholder="Card Number"
+                    />
+                    <input
+                      type="text"
+                      id="creditCardDate"
+                      name="creditCardDate"
+                      placeholder="MM / YY"
+                    />
+                    <input
+                      type="text"
+                      id="creditCardCvc"
+                      name="creditCardCvc"
+                      placeholder="CVC"
+                    />
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <section
+              class="flex__start-center | form__section form__section--footer"
+            >
+              <button>Buy WP Pusher</button>
+
+              <div class="flex__start">
+                <figure>
+                  <img src="./assets/question_mark.svg" alt="question_mark" />
+                </figure>
+                <p>
+                  <span>Need any help?</span> Don&apos;t hesitate to contact
+                  <br />
+                  support!
+                </p>
+              </div>
+
+              <figure>
+                <img src="./assets/powered_by_stripe.svg" alt="stripe" />
+              </figure>
+            </section>
+          </form>
+        </section>
+
+        <aside>
+          <div class="aside__top">
+            <h2>Freelancer</h2>
+
+            <div>
+              <p>
+                <span>$</span>
+                <span>99</span>/ year
+              </p>
+              <p>
+                <em>
+                  Automatically renews <br />
+                  after 1 year
+                </em>
+              </p>
+            </div>
+
+            <ul class="flex__start">
+              <li>Use on <span>5</span> client sides</li>
+              <li>Private repositories</li>
+              <li>Email support</li>
+            </ul>
+
+            <p>
+              Need <span>20</span> client sites? <br />
+              <span> Switch to the <em>Agency</em> plan.</span>
+            </p>
+          </div>
+
+          <hr />
+
+          <div class="flex__start | aside__bottom">
+            <p>
+              <em>
+                FTP is horrible to deal with. <span>WP Pusher</span> solves that
+                issue, and the customer support is awesome!
+              </em>
+            </p>
+
+            <div class="flex__start-center">
+              <figure>
+                <img src="./assets/avatar.png" alt="avatar" />
+              </figure>
+              <p>Kirk Beard</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <p class="text--copyright flex__center">
+        <span>© 2018 WP Pusher IVS</span> · <span>Terms of Service</span>
+      </p>
+    </main>
+  </body>
+</html>

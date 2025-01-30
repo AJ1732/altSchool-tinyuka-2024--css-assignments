@@ -1,0 +1,30 @@
+@use "../../base" as *;
+
+.aurora {
+  position: absolute;
+  top: 5%;
+  z-index: -1;
+  width: 12.444rem;
+  height: 13.4425rem;
+  filter: blur(350px);
+  flex-shrink: 0;
+
+  &--red {
+    z-index: -2;
+    background-color: #d60505;
+  }
+
+  &--green {
+    left: 50%;
+    top: 10%;
+    transform: translateX(-30%);
+    background-color: #067808;
+  }
+
+  &--yellow {
+    right: 0;
+    transform: translateX(-30%);
+    background-color: #eac81f;
+    border-radius: 18rem;
+  }
+}

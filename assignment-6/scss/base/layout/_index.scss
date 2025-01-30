@@ -1,0 +1,60 @@
+//  FLEX LAYOUT
+%flex-core {
+  display: flex;
+}
+
+%flex-wrap {
+  flex-wrap: nowrap;
+}
+
+@mixin flex-layout(
+  $direction: row,
+  $align: stretch,
+  $justify: flex-start,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  @extend %flex-core;
+  @extend %flex-wrap;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+// CONTENT GRID LAYOUT
+%content-grid-core {
+  --padding-inline: 1.5rem;
+  --content-max-width: 76rem;
+  --layout-max-width: 90rem;
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(var(--padding-inline), 1fr)
+    [content-start]
+    min(100% - (var(--padding-inline) * 2), var(--content-max-width))
+    [content-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
+}
+
+%content-grid-column {
+  grid-column: content;
+}
+
+%content-grid-full-width {
+  grid-column: full-width;
+}
+
+@mixin content-grid-layout() {
+  @extend %content-grid-core;
+
+  & > :not(.full-width) {
+    @extend %content-grid-column;
+  }
+
+  & > .full-width {
+    @extend %content-grid-full-width;
+  }
+}

@@ -1,0 +1,23 @@
+.content-grid {
+  --padding-inline: 1.5rem;
+  --content-max-width: 84.875rem;
+  --layout-max-width: 90rem;
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(var(--padding-inline), 1fr)
+    [content-start]
+    min(100% - (var(--padding-inline) * 2), var(--content-max-width))
+    [content-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
+}
+
+.content-grid > :not(.full-width) {
+  grid-column: content;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+}

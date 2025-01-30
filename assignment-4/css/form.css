@@ -1,0 +1,52 @@
+input,
+select {
+  width: 100%;
+  color: var(--text-heading);
+  border: 1px solid var(--text-grey-300);
+  border-radius: 0.125rem;
+  padding: 0.875rem 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: 1px solid var(--accent);
+}
+
+input::placeholder,
+select:invalid {
+  color: var(--text-grey-100);
+  font-family: var(--font-sp-extralight);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0125rem;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+option {
+  color: var(--text-heading);
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  background: #fff url("../assets/calendar-icon.svg") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/* .date-custom-placeholder {
+  position: absolute;
+  top: calc(50% + 1rem);
+  left: 1rem;
+  font-size: 1rem;
+  transform: translateY(-50%);
+  background-color: var(--accent);
+}
+
+.form__section__field input[type="date"]:focus + .date-custom-placeholder,
+.form__section__field input[type="date"]:not(:placeholder-shown) + .date-custom-placeholder {
+  opacity: 0;
+} */

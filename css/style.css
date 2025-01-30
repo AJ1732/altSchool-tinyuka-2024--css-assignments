@@ -1,0 +1,126 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --accent: #f15025;
+  --foreground: #191919;
+  --background: #ffffff;
+  --shade-100: #e6e8e6;
+  --shade-200: #ced0ce;
+
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+
+  --body-font: "Quicksand", serif;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--body-font);
+  min-height: 100dvh;
+  font-weight: 400;
+}
+
+header,
+li {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0rem 1rem;
+  flex-wrap: wrap;
+}
+
+main {
+  row-gap: 1.5rem; /* FOR THE content-grid CLASS */
+}
+
+p {
+  font-size: var(--fs-base);
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: var(--fs-lg);
+  }
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  width: fit-content;
+}
+a:hover,
+a:active,
+a:visited {
+  color: var(--accent);
+  text-decoration: underline;
+}
+a[id="github"] {
+  color: var(--foreground);
+  font-size: var(--fs-2xl);
+}
+a[id="github"]:hover {
+  color: var(--accent);
+}
+
+li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.5rem;
+
+  font-size: var(--fs-lg);
+}
+
+@media (min-width: 768px) {
+  li {
+    font-size: var(--fs-xl);
+    font-size: var(--fs-2xl);
+  }
+}
+
+.headline__sub {
+  font-size: var(--fs-xl);
+}
+
+.project__details h2 {
+  margin-bottom: 0.5rem;
+}
+.project__details li {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .project__details li p {
+    margin-top: 0.25rem;
+    height: fit-content;
+  }
+}
+
+.content-grid {
+  --padding-inline: 1.5rem;
+  --content-max-width: 72.5rem;
+  --layout-max-width: 90rem;
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(var(--padding-inline), 1fr)
+    [content-start]
+    min(100% - (var(--padding-inline) * 2), var(--content-max-width))
+    [content-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
+  padding-block: 4rem;
+}
+.content-grid > :not(.full-width) {
+  grid-column: content;
+}
+.content-grid > .full-width {
+  grid-column: full-width;
+}

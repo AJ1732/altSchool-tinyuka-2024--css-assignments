@@ -1,0 +1,78 @@
+@use "sass:map";
+
+$rem: 1rem;
+
+// FONT SIZE MAP
+$sizes: (
+  "xs": 0.75,
+  "sm": 0.875,
+  "base": 1,
+  "md": 1.125,
+  "lg": 1.25,
+  "xl": 1.5,
+  "2xl": 1.875,
+  "3xl": 2,
+  "4xl": 2.25,
+  "5xl": 2.5,
+  "6xl": 3,
+);
+
+// FONT SIZE VARIABLES
+$font-size-xs: map.get($sizes, "xs") * $rem;
+$font-size-sm: map.get($sizes, "sm") * $rem;
+$font-size-base: map.get($sizes, "base") * $rem;
+$font-size-md: map.get($sizes, "md") * $rem;
+$font-size-lg: map.get($sizes, "lg") * $rem;
+$font-size-xl: map.get($sizes, "xl") * $rem;
+$font-size-2xl: map.get($sizes, "2xl") * $rem;
+$font-size-3xl: map.get($sizes, "3xl") * $rem;
+$font-size-4xl: map.get($sizes, "4xl") * $rem;
+$font-size-5xl: map.get($sizes, "5xl") * $rem;
+$font-size-6xl: map.get($sizes, "6xl") * $rem;
+
+// FONT FAMILY VARIABLES
+$font-gilroy-thin: "Gilroy Thin", sans-serif;
+$font-gilroy-light: "Gilroy Light", sans-serif;
+$font-gilroy-regular: "Gilroy Regular", sans-serif;
+$font-gilroy-medium: "Gilroy Medium", sans-serif;
+$font-gilroy-bold: "Gilroy Bold", sans-serif;
+$font-gilroy-semibold: "Gilroy SemiBold", sans-serif;
+$font-gilroy-extrabold: "Gilroy ExtraBold", sans-serif;
+$font-gilroy-black: "Gilroy Black", sans-serif;
+
+// COLORS MAP
+$colors: (
+  "white": #fff,
+  "shade": #f9fbfd,
+  "grey": #1e3448,
+  "foreground": #141414,
+  "primary": (
+    "100": #3284ff,
+    "200": #4991ff,
+    "300": #0065fe,
+    "400": #005ae2,
+  ),
+  "neutral": (
+    "200": #D6D6D6,
+    "800": #112232,
+    "900": #071827,
+  ),
+);
+
+// COLOR VARIABLES
+$primary: map.get($colors, "primary");
+$neutral: map.get($colors, "neutral");
+
+$primary-100: map.get($primary, "100");
+$primary-200: map.get($primary, "200");
+$primary-300: map.get($primary, "300");
+$primary-400: map.get($primary, "400");
+
+$neutral-200: map.get($neutral, "200");
+$neutral-800: map.get($neutral, "800");
+$neutral-900: map.get($neutral, "900");
+
+$white-color: map.get($colors, "white");
+$grey-color: map.get($colors, "grey");
+$shade-color: map.get($colors, "shade");
+$foreground-color: map.get($colors, "foreground");

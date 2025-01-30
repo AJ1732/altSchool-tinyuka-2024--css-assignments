@@ -1,0 +1,55 @@
+@use "../../base" as *;
+
+.cta {
+  position: relative;
+  overflow: hidden;
+  justify-items: center; /* CENTER ITEM IN CONTENT GRID */
+  color: $white-color;
+  text-align: center;
+  background: linear-gradient(180deg, #1e3448 99.99%, rgba(30, 52, 72, 0) 100%);
+  padding: 5rem 0 3.5rem 0;
+  row-gap: 2rem;
+
+  @include md {
+    padding: 6.5rem 0 3.5rem 0;
+    row-gap: 3rem;
+  }
+
+  &__blobs {
+    img {
+      &:first-child {
+        top: -60%;
+        left: -50%;
+        transform: rotate(8deg);
+        opacity: 0.7;
+
+        @include md {
+          top: -130%;
+          left: -50%;
+        }
+
+        @include lg {
+          top: -170%;
+          left: -40%;
+        }
+      }
+
+      &:last-child {
+        right: -40%;
+        bottom: -60%;
+        opacity: 0.7;
+
+        @include md {
+          right: -40%;
+          bottom: -140%;
+        }
+
+        @include lg {
+          right: -45%;
+          bottom: -150%;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

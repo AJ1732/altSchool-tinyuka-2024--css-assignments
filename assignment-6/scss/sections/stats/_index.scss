@@ -1,0 +1,35 @@
+@use "../../base" as *;
+
+.stats {
+  background-color: $shade-color;
+
+  &__container {
+    @include flex-layout(row, flex-start, space-between, 2rem);
+    padding-block: 3.75rem;
+    @include md {
+      align-items: center;
+    }
+  }
+
+  &__details {
+    @include flex-layout(column, flex-start, space-between, 2rem);
+    @include md {
+      flex-direction: row;
+    }
+
+    & > div {
+      h3 {
+        @include typography($font-gilroy-semibold, $font-size-3xl, 125%);
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        @include typography($font-gilroy-medium, $font-size-base, 150%);
+      }
+    }
+
+    @include lg {
+      gap: 4.5rem;
+    }
+  }
+}

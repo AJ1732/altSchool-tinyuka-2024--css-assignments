@@ -1,0 +1,103 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --color: "#000";
+  --grey: #5f5f5f;
+  --accent: #ffefb1;
+  --background: #9c9ec4;
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-2xl: 1.5rem;
+
+  --body-font: "Merriweather", serif;
+}
+
+body {
+  color: var(--color);
+  font-family: var(--body-font);
+  background-color: var(--background);
+  min-height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 48rem) {
+  body {
+    padding-inline: 1.5rem;
+  }
+}
+
+section {
+  max-width: 24rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+
+section figure {
+  aspect-ratio: 4.5/3;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+section figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section article {
+  padding: 1.5rem 1.25rem 2rem;
+  font-size: var(--fs-base);
+}
+
+section article header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+section article header h2 {
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+}
+
+section article header h3 {
+  color: var(--grey);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  margin-bottom: 0.125rem;
+}
+
+section article p {
+  font-size: var(--fs-sm);
+  line-height: 1.35;
+}
+
+.tag {
+  z-index: 2;
+  top: 0.5rem;
+  left: -1rem;
+  position: absolute;
+
+  font-weight: 800;
+  font-size: var(--fs-base);
+
+  width: fit-content;
+  background-color: var(--accent);
+  padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+  border-radius: 0.25rem 1.5rem 1.5rem 0.25rem;
+}

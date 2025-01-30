@@ -1,0 +1,19 @@
+:root {
+  --dark: #1e1e1e;
+  --accent: #2ec4b6;
+  --background: #f7fdfc;
+
+  --text-heading: #011c34;
+  --text-grey-100: #737373;
+  --text-grey-200: #a6a6a6;
+  --text-grey-300: #f0f0f0;
+
+  --font-sp-extralight: "Sofia Pro ExtraLight", sans-serif;
+  --font-sp-light: "Sofia Pro Light", sans-serif;
+  --font-sp-regular: "Sofia Pro Regular", sans-serif;
+  --font-sp-medium: "Sofia Pro Medium", sans-serif;
+  --font-sp-semibold: "Sofia Pro SemiBold", sans-serif;
+
+  --font-brown-bold: "Brown Bold", sans-serif;
+  --font-brown-medium: "Brown Medium Regular", sans-serif;
+}

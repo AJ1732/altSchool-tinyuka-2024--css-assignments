@@ -1,0 +1,89 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --color: "#000";
+  --primary: #666666;
+  --primary-light: #999999;
+  --accent-yellow: #ffbf00;
+  --accent-yellow-dark: #cc9900;
+  --accent-green: #009966;
+
+  --body-font: "Lato", serif;
+  --font-size-base: 1.25rem;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--font-size-base);
+}
+
+.container {
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+/* HERO SECTION STYLES */
+.section__hero {
+  padding: 6rem 1.5rem 4rem;
+}
+
+.section__hero h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.section__hero > p {
+  font-weight: 400;
+  max-width: 25rem;
+}
+
+.section__hero p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+/* OPERATION SECTION STYLES */
+.section__operation {
+  padding-block: 4.5rem;
+  background-color: var(--primary);
+  border-top: 8px solid var(--primary-light);
+}
+
+.section__operation article {
+  font-weight: 500;
+  padding: 0.5rem 1.5rem 1.5rem;
+  background-color: #ffff;
+  border-bottom: 8px solid var(--primary-light);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.section__operation article header {
+  width: fit-content;
+  padding: 1rem 2rem;
+  margin-left: -2rem;
+  background-color: var(--accent-yellow);
+  border-bottom: 8px solid var(--accent-yellow-dark);
+}
+
+.section__operation article h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.section__operation article p {
+  font-weight: 500;
+}
+
+.section__operation article p:first-of-type {
+  margin-block: 1rem;
+}
+
+@layer utilities {
+  .section__hero--highlighted {
+    color: var(--accent-green);
+    font-weight: 800;
+  }
+}

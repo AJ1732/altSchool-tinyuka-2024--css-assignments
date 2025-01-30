@@ -1,0 +1,167 @@
+@use "../../base" as *;
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  font-family: $font-gilroy-medium;
+  padding: 6rem 0 2.5rem 0;
+  color: $neutral-800;
+
+  &__blobs {
+    img {
+      &:first-child {
+        bottom: 70%;
+        left: -50%;
+        transform: rotate(70deg);
+        opacity: 0.7;
+
+        @include md {
+          bottom: 40%;
+        }
+
+        @include lg {
+          bottom: -70%;
+          left: -40%;
+          transform: rotate(-30deg);
+        }
+      }
+
+      &:last-child {
+        right: -40%;
+        bottom: -10%;
+        opacity: 0.7;
+
+        @include md {
+          right: -40%;
+          bottom: -30%;
+        }
+
+        @include lg {
+          right: -40%;
+          bottom: -50%;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__navigation,
+  &__legal {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__navigation {
+    @include flex-layout(column, flex-start, space-between, 4rem);
+
+    margin-bottom: 2.5rem;
+    margin-inline: auto;
+    max-width: 65rem;
+    width: 100%;
+
+    @include md {
+      margin-bottom: 1.5rem;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+
+    @include xl {
+      gap: 2.5rem;
+    }
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  &__icons {
+    max-width: 11.5rem;
+
+    &__logo {
+      min-width: 9rem;
+      margin-bottom: 1rem;
+
+      @include md {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__social {
+      @include flex-layout(row, flex-start, center, 1.5rem);
+      padding-inline: 0.5rem;
+
+      @include md {
+        gap: 1.25rem;
+      }
+
+      @include lg {
+        gap: 1.5rem;
+      }
+
+      figure {
+        min-width: 1.5rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 1rem;
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 0rem;
+    }
+
+    @include lg {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 1.5rem;
+    }
+
+    &__item {
+      @include flex-layout(column, flex-start, flex-start, 0.5rem);
+
+      width: fit-content;
+      line-height: 1.5rem;
+      white-space: nowrap;
+
+      @include md {
+        padding-inline: 1rem;
+      }
+
+      @include lg {
+        padding-inline: 1.5rem;
+      }
+
+      &:nth-last-child(1) {
+        @include lg {
+          grid-row: 1 / span 2;
+          grid-column-end: -1;
+        }
+      }
+
+      li {
+        cursor: pointer;
+
+        &:hover {
+          color: $primary-300;
+        }
+      }
+    }
+  }
+
+  &__legal {
+    ul {
+      @include flex-layout(row, flex-start, flex-start, 0.5rem);
+      margin-inline: auto;
+      width: fit-content;
+
+      @include md {
+        margin-inline: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}

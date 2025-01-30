@@ -1,0 +1,87 @@
+@use "../../base" as *;
+
+.demo {
+  position: relative;
+  overflow: hidden;
+  padding-block: 5.25rem;
+  background: var(
+    --Linear-gradient,
+    linear-gradient(180deg, #1e3448 99.99%, rgba(30, 52, 72, 0) 100%)
+  );
+
+  &__blobs {
+    img {
+      &:first-child {
+        top: -30%;
+        left: -50%;
+        transform: rotate(8deg);
+        opacity: 0.5;
+
+        @include lg {
+          top: -100%;
+          left: -50%;
+        }
+      }
+
+      &:last-child {
+        right: -40%;
+        bottom: -50%;
+        opacity: 0.5;
+
+        @include lg {
+          right: -45%;
+          bottom: -150%;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 29.75rem;
+    padding: 2.25rem 2rem;
+    margin-inline: auto;
+    background-color: $white-color;
+    border-radius: 0.75rem;
+    position: relative;
+    z-index: 10;
+
+    @include md {
+      padding: 2.625rem;
+    }
+
+    &__container {
+      display: grid;
+      gap: 0.75rem;
+
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem 0.75rem;
+      }
+    }
+
+    &__field--span {
+      @include md {
+        grid-column: span 2;
+      }
+    }
+
+    &__submit {
+      width: 100%;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    &__disclaimer {
+      @include typography($font-gilroy-medium, $font-size-sm, 1.25rem);
+
+      color: $primary-100;
+      padding: 0.625rem;
+
+      span {
+        color: $primary-200;
+        font-family: $font-gilroy-bold;
+      }
+    }
+  }
+}

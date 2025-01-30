@@ -1,0 +1,41 @@
+@use "../../base" as *;
+
+.section__heading {
+  position: relative;
+  z-index: 5;
+  font-family: $font-gilroy-bold;
+  font-size: $font-size-2xl;
+  line-height: 120%;
+
+  @include md {
+    font-size: $font-size-4xl;
+  }
+
+  @include lg {
+    font-size: $font-size-5xl;
+  }
+
+  span {
+    color: $primary-400;
+  }
+
+  &--stroke {
+    padding-left: 1.25rem;
+    padding-bottom: 0.25rem;
+    font-size: $font-size-5xl;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      left: 0;
+
+      width: 5px;
+      background: linear-gradient(
+        180deg,
+        #112232 0%,
+        rgba(77, 107, 136, 0) 100%
+      );
+    }
+  }
+}

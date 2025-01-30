@@ -1,0 +1,199 @@
+@import "./variables.css";
+@import "./reset.css";
+@import "./font.css";
+@import "./layout.css";
+@import "./form.css";
+
+body {
+  min-height: 100dvh;
+  padding-block: 5rem;
+  font-family: var(--font-sp-light);
+  background-color: var(--background);
+
+  align-content: center; /* FOR CONTENT GRID CLASS IN LAYOUT.CSS FILE */
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/* HEADER SECTION STYLES */
+.header {
+  width: 100%;
+  max-width: 28.75rem;
+}
+
+.header__logo {
+  aspect-ratio: 0.98;
+  max-width: 5.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 48rem) {
+  .header__logo {
+    max-width: 3.5rem;
+  }
+}
+
+.header__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header__title {
+  color: var(--dark);
+  font-family: var(--font-sp-semibold);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.125rem;
+  letter-spacing: -0.05rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 48rem) {
+  .header__title {
+    font-size: 1.875rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.header__description {
+  color: var(--text-grey-100);
+  line-height: 1.5625rem;
+  /* font-family: var(--font-brown-medium); */
+}
+
+@media (max-width: 48rem) {
+  .header__description--mobile {
+    font-family: var(--font-sp-extralight);
+  }
+
+  .header__description--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .header__description--mobile {
+    display: none;
+  }
+}
+
+/* FORM SECTION STYLES */
+.form__section {
+  width: 100%;
+  height: fit-content;
+  max-width: 36.25rem;
+  padding: 1.5rem 1rem 1.875rem;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .form__section {
+    padding: 2.5rem;
+  }
+}
+
+.form__section__form {
+  margin-bottom: 1rem;
+  display: grid;
+  row-gap: 1.875rem;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .form__section__form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.form__section__field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.form__section__field label {
+  color: var(--text-heading);
+  font-family: var(--font-sp-semibold);
+  font-size: 0.875rem;
+}
+
+.form__section__field--show__button,
+.form__section__field--chevron__button,
+.form__section__field--calender__button {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.625rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.form__section__field--chevron__button,
+.form__section__field--calender__button {
+  pointer-events: none;
+  bottom: 0.35rem;
+}
+
+@media (min-width: 1024px) {
+  .form__section__field--span {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.form__section__button {
+  background-color: var(--accent);
+  border-radius: 4px;
+  padding: 0.875rem;
+
+  color: #fff;
+  font-family: var(--font-sp-semibold);
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.0125rem;
+}
+
+@media (min-width: 1024px) {
+  .form__section__button {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.form__section__agreement {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5625rem;
+  padding-inline: 0.5rem;
+}
+
+@layer utilities {
+  .text--highlighted {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration-line: underline;
+  }
+}

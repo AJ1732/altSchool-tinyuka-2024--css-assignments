@@ -1,0 +1,90 @@
+@use "../../base" as *;
+
+.accordion {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 49.5rem;
+  margin-top: -1rem;
+
+  &__item {
+    font-weight: 400;
+    border-bottom: 1px solid $neutral-200;
+    overflow: hidden;
+
+    &[open] {
+      > summary {
+        &::after {
+          content: "";
+          background-image: url("../assets/svgs/minus-icon.svg");
+          transition: transform 0.3s ease;
+          transform: rotate(0deg);
+        }
+      }
+
+      .accordion__content {
+        opacity: 1;
+        padding-bottom: 1rem;
+        animation-name: fadeInDown;
+        animation-duration: 0.5s;
+      }
+    }
+  }
+
+  &__summary {
+    @include flex-layout(row, center, space-between, 1.5rem);
+
+    font-size: $font-size-lg;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 2rem 2rem 1rem 0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+
+    &::after {
+      content: "";
+      width: 1.5rem;
+      aspect-ratio: 1/1;
+      position: absolute;
+      right: 0.5rem;
+      background-image: url("../assets/svgs/plus-icon.svg");
+      transition: transform 0.3s ease;
+      transform: rotate(90deg);
+    }
+
+    &::marker {
+      content: "";
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__content {
+    font-size: $font-size-sm;
+    line-height: 200%;
+    padding: 0;
+    overflow: hidden;
+    transition: padding 0.3s ease;
+
+    @include md {
+      font-size: $font-size-base;
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-1.25rem);
+    }
+    60% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../base" as *;
+
+.blobs {
+  @include content-grid-layout();
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  img {
+    position: absolute;
+  }
+}

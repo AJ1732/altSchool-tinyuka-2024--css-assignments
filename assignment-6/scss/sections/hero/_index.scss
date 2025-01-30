@@ -1,0 +1,103 @@
+@use "../../base" as *;
+
+.hero {
+  align-content: space-between; /* FOR THE CONTENT GRID LAYOUT IN THE ROOT SCSS */
+  min-height: calc(100svh - 4.25rem);
+  padding-top: 6.625rem;
+
+  &__container {
+    max-width: 59.25rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__headline {
+    @include typography($font-gilroy-bold, $font-size-2xl, 150%);
+    padding-bottom: 1rem;
+
+    @include md {
+      font-size: $font-size-5xl;
+      line-height: 175%;
+    }
+
+    @include lg {
+      font-size: $font-size-6xl;
+      line-height: 200%;
+    }
+
+    span {
+      color: $primary-400;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__sub {
+      @include typography($font-gilroy-medium, $font-size-md, 155%);
+
+      max-width: 50rem;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+
+      @include md {
+        font-size: $font-size-lg;
+      }
+    }
+  }
+
+  &__buttons {
+    @include flex-layout(row, center, center, 1.5rem);
+  }
+
+  &__visual {
+    @include flex-layout(column, center, space-between, 1.5rem);
+    width: 100%;
+    padding-top: 3.5rem;
+
+    &__top {
+      padding-right: 1.5rem;
+      max-width: 52.0625rem;
+
+      @include xl {
+        max-width: 45%;
+      }
+    }
+
+    &__bottom {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+
+      &__ellipse {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 66.5%;
+        height: 52.7%;
+        margin: auto;
+        border-radius: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(226, 233, 240, 0.7) 10.68%,
+          rgba(220, 228, 235, 0.7) 44.01%,
+          rgba(226, 233, 240, 0) 100%
+        );
+        box-shadow: 0px 4px 4px 0px rgba(18, 36, 89, 0.35);
+      }
+
+      svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}

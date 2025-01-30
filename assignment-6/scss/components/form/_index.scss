@@ -1,0 +1,63 @@
+@use "../../base" as *;
+
+// label {
+//   position: absolute;
+//   font-size: $font-size-sm;
+//   color: $primary-300;
+//   top: 1.125rem;
+//   left: 1.5rem;
+//   z-index: 5;
+//   pointer-events: none;
+
+//   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+// }
+
+input[type="text"],
+select {
+  width: 100%;
+  font-size: $font-size-sm;
+  padding: 1.125rem 1.5rem;
+  border: 1px solid $primary-300;
+  border-radius: 0.75rem;
+  outline: none;
+  position: relative;
+  background-color: transparent;
+
+  &:focus {
+    outline: 1px solid $primary-300;
+  }
+
+  &::placeholder,
+  &:invalid {
+    color: $primary-300;
+    font-size: $font-size-sm;
+  }
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+option {
+  color: $neutral-800;
+}
+
+.form {
+  &__field {
+    @include flex-layout(column, start, start, 0.5rem);
+    position: relative;
+    min-height: 3.45rem;
+
+    .select__button {
+      position: absolute;
+      top: 1.125rem;
+      right: 1.25rem;
+    }
+  }
+}

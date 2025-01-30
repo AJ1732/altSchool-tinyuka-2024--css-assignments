@@ -1,0 +1,11 @@
+@use "sass:color";
+
+@function adjust-color($color, $amount: 10%) {
+  $lightness: color.channel($color, "lightness", $space: hsl);
+
+  @if $lightness > 50 {
+    @return color.adjust($color, $lightness: -$amount);
+  } @else {
+    @return color.adjust($color, $lightness: $amount);
+  }
+}

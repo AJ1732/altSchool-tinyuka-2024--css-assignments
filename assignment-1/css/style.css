@@ -1,0 +1,47 @@
+@import "./reset.css";
+
+:root {
+  --color: "#000";
+  --accent: #ff0095;
+  --background: #202020;
+
+  --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Ubuntu, Arial, sans-serif;
+}
+
+body {
+  color: var(--color);
+  background-color: var(--background);
+  font-family: var(--body-font);
+  min-height: 100dvh;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: fit-content;
+  height: fit-content;
+  max-width: 22rem;
+  font-size: 0.875rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  border-radius: 4px;
+  margin-top: -4rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}

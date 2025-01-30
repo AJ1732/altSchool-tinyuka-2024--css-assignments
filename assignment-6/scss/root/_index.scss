@@ -1,0 +1,16 @@
+@use "../base/" as *;
+
+body {
+  color: $foreground-color;
+  font-family: $font-gilroy-regular;
+}
+
+main {
+  min-height: calc(100svh - 2rem);
+  margin-top: 4.25rem;
+}
+
+section,
+footer {
+  @include content-grid-layout();
+}

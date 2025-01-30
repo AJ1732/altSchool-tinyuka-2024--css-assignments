@@ -1,0 +1,11 @@
+// @use "sass:list";
+
+@mixin transition($property: all, $duration: 0.2s, $easing: ease-in-out) {
+  transition: $property $duration $easing;
+}
+
+@mixin typography($font, $size, $line-height: normal) {
+  font-family: $font;
+  font-size: $size;
+  line-height: $line-height;
+}

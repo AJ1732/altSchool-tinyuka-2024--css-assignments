@@ -1,0 +1,88 @@
+@use "../../base" as *;
+
+// CORE BUTTON STYLES
+%button-core {
+  position: relative;
+  z-index: 5;
+  font-family: $font-gilroy-semibold;
+  min-width: 8.875rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6.25rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+// BUTTON VARIAMTS
+%button-styles {
+  color: white;
+  background-color: $primary-300;
+}
+
+%button-outline {
+  color: $primary-300;
+  background-color: transparent;
+  border: 1px solid $primary-300;
+}
+
+%button-naked {
+  color: $primary-300;
+  background-color: transparent;
+  min-width: fit-content;
+}
+
+%button-lg {
+  min-width: 12.5rem;
+  padding-block: 0.875rem;
+}
+
+// MIXINS FOR HOVER AND ACTIVE STATE
+@mixin button-hover($color) {
+  color: white;
+  background-color: adjust-color($color, 10%);
+}
+
+@mixin button-outline-hover {
+  background-color: $primary-300;
+}
+
+@mixin button-naked-hover($color) {
+  color: $color;
+  background-color: adjust-color($color, 45%);
+}
+
+@mixin button-active {
+  transform: scale(0.98);
+}
+
+.button {
+  @extend %button-core;
+  @extend %button-styles;
+
+  &:hover {
+    @include button-hover($primary-300);
+  }
+
+  &:active {
+    @include button-active;
+  }
+
+  &--outline {
+    @extend %button-outline;
+
+    &:hover {
+      @include button-outline-hover;
+    }
+  }
+
+  &--naked {
+    @extend %button-naked;
+
+    &:hover {
+      @include button-naked-hover($primary-300);
+    }
+  }
+
+  &--lg {
+    @extend %button-lg;
+  }
+}
