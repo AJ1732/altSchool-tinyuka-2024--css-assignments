@@ -35,6 +35,7 @@
               id="firstName"
               name="firstName"
               placeholder="Enter First Name"
+              autocomplete="given-name"
             />
           </div>
 
@@ -46,13 +47,14 @@
               id="lastName"
               name="lastName"
               placeholder="Enter Last Name"
+              autocomplete="family-name"
             />
           </div>
 
           <!-- GENDER FIELD -->
           <div class="form__section__field">
             <label for="gender">Gender</label>
-            <select name="gender" id="gender" required>
+            <select name="gender" id="gender" autocomplete="sex" required>
               <option value="" disabled selected hidden>Select Gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -80,9 +82,12 @@
           <!-- DATE FIELD -->
           <div class="form__section__field form__section__field--date">
             <label for="birthDate">Date of Birth</label>
-            <input type="date" id="birthDate" name="birthDate" />
-
-            <!-- <span class="date-custom-placeholder">mm/dd/yyyy</span> -->
+            <input
+              type="date"
+              id="birthDate"
+              name="birthDate"
+              autocomplete="bday"
+            />
           </div>
 
           <!-- WEIGHT FIELD -->
@@ -93,6 +98,7 @@
               id="weight"
               name="weight"
               placeholder="Enter Weight"
+              autocomplete="off"
             />
           </div>
 
@@ -104,13 +110,19 @@
               id="height"
               name="height"
               placeholder="Enter height here.. "
+              autocomplete="off"
             />
           </div>
 
           <!-- ACIVITY LEVEL FIELD -->
           <div class="form__section__field form__section__field--span">
             <label for="activityLevel">Activity Level</label>
-            <select name="activityLevel" id="activityLevel" required>
+            <select
+              name="activityLevel"
+              id="activityLevel"
+              autocomplete="off"
+              required
+            >
               <option value="" disabled selected hidden>
                 Select Activity Level
               </option>
@@ -146,6 +158,7 @@
               id="password"
               name="password"
               placeholder="Enter Password"
+              autocomplete="new-password"
             />
 
             <button class="form__section__field--show__button" type="button">
