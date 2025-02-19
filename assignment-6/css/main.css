@@ -218,11 +218,11 @@ button:focus:not(:-moz-focusring) {
   font-weight: 900;
   src: url("../assets/font/gilroy/Gilroy-BlackItalic.ttf") format("truetype");
 }
-.pricing__cards, .pricing__card, .pricing__card__list, .pricing__buttons, .features__container, .features__grid__item figure, .stats__container, .stats__details, .hero__buttons, .hero__visual, .accordion__summary, .form__field, .footer__navigation, .footer__icons__social, .footer__grid__item, .footer__legal ul, .nav, .nav__links, .nav__links li, .nav__links--mobile, .nav__links--mobile li, .nav__buttons, .nav__hamburger, .nav__mobile {
+.pricing__cards, .pricing__card, .pricing__card__list, .pricing__buttons, .features__container, .features__grid__item figure, .stats__container, .stats__details, .hero__buttons, .hero__visual, .accordion__summary, .form__field, .footer__navigation, .footer__icons__social, .footer__grid__item, .footer__legal ul, .nav, .nav__links, .nav__links li a, .nav__links--mobile, .nav__links--mobile li, .nav__buttons, .nav__hamburger, .nav__mobile {
   display: flex;
 }
 
-.pricing__cards, .pricing__card, .pricing__card__list, .pricing__buttons, .features__container, .features__grid__item figure, .stats__container, .stats__details, .hero__buttons, .hero__visual, .accordion__summary, .form__field, .footer__navigation, .footer__icons__social, .footer__grid__item, .footer__legal ul, .nav, .nav__links, .nav__links li, .nav__links--mobile, .nav__links--mobile li, .nav__buttons, .nav__hamburger, .nav__mobile {
+.pricing__cards, .pricing__card, .pricing__card__list, .pricing__buttons, .features__container, .features__grid__item figure, .stats__container, .stats__details, .hero__buttons, .hero__visual, .accordion__summary, .form__field, .footer__navigation, .footer__icons__social, .footer__grid__item, .footer__legal ul, .nav, .nav__links, .nav__links li a, .nav__links--mobile, .nav__links--mobile li, .nav__buttons, .nav__hamburger, .nav__mobile {
   flex-wrap: nowrap;
 }
 
@@ -243,6 +243,10 @@ footer > :not(.full-width) {
 .blobs > .full-width, .navbar > .full-width, section > .full-width,
 footer > .full-width {
   grid-column: full-width;
+}
+
+* {
+  scroll-margin-top: 80px;
 }
 
 body {
@@ -377,16 +381,19 @@ main {
 }
 .nav__links li {
   transition: color 0.2s ease-in-out;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
 }
 .nav__links li:hover {
   color: #0065fe;
+}
+.nav__links li a {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-decoration: none;
 }
 .nav__links--mobile {
   flex-direction: column;

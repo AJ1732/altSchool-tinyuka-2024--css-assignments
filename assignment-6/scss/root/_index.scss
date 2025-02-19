@@ -1,5 +1,9 @@
 @use "../base/" as *;
 
+* {
+  scroll-margin-top: 80px;
+}
+
 body {
   color: $foreground-color;
   font-family: $font-gilroy-regular;

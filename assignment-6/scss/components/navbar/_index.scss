@@ -40,7 +40,6 @@
 
     li {
       @include transition(color);
-      @include flex-layout(row, center, center, 0.25rem);
 
       cursor: pointer;
       white-space: nowrap;
@@ -48,6 +47,11 @@
 
       &:hover {
         color: $primary-300;
+      }
+
+      a {
+        @include flex-layout(row, center, center, 0.25rem);
+        text-decoration: none;
       }
     }
 
